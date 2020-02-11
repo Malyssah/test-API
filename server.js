@@ -24,62 +24,6 @@ var dbConn = mysql.createConnection({
 // connexion à la base
 dbConn.connect(); 
 
-// Récupérer tous les utilisateurs 
-// app.get('/users', function (req, res) {
-//     dbConn.query('SELECT * FROM users', function (error, results, fields) {
-//         if (error) throw error;
-//         return res.send({ error: false, data: results, message: 'users list.' });
-//     });
-// });
-
-// Récupérer l'utilisateur avec l'id
-// app.get('/users/:id', function (req, res) {
-//     let user_id = req.params.id;
-//     if (!user_id) {
-//         return res.status(400).send({ error: true, message: 'Please provide user_id' });
-//     }
-//     dbConn.query('SELECT * FROM users where id=?', user_id, function (error, results, fields) {
-//         if (error) throw error;
-//         return res.send({ error: false, data: results[0], message: 'users list.' });
-//     });
-// });
-
-// Ajouter un nouvel utilisateur
-// app.post('/users', function (req, res) {
-//     let user = req.body.user;
-//     if (!user) {
-//         return res.status(400).send({ error:true, message: 'Please provide user' });
-//     }
-//     dbConn.query("INSERT INTO users SET ? ", { user: user }, function (error, results, fields) {
-//         if (error) throw error;
-//         return res.send({ error: false, data: results, message: 'New user has been created successfully.' });
-//     });
-// });
-
-//  Mettre à jour l'utilisateur avec l'id
-// app.put('/users', function (req, res) {
-//     let user_id = req.body.user_id;
-//     let user = req.body.user;
-//     if (!user_id || !user) {
-//         return res.status(400).send({ error: user, message: 'Please provide user and user_id' });
-//     }
-//     dbConn.query("UPDATE users SET user = ? WHERE id = ?", [user, user_id], function (error, results, fields) {
-//         if (error) throw error;
-//         return res.send({ error: false, data: results, message: 'user has been updated successfully.' });
-//     });
-// });
-
-//Supprimer l'utilisateur
-// app.delete('/users', function (req, res) {
-//     let user_id = req.body.user_id;
-//     if (!user_id) {
-//         return res.status(400).send({ error: true, message: 'Please provide user_id' });
-//     }
-//     dbConn.query('DELETE FROM users WHERE id = ?', [user_id], function (error, results, fields) {
-//         if (error) throw error;
-//         return res.send({ error: false, data: results, message: 'User has been updated successfully.' });
-//     });
-// });
 
 // Récupérer toutes les catégories 
 app.get('/categories', function (req, res) {
